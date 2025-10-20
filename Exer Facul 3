@@ -1,0 +1,132 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNAgnTKIqt8SEBDMqRMHbHC",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/josi0902/Exercicios-Facul/blob/main/Exer%20Facul%203\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 24,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CSAiNg26MM-K",
+        "outputId": "1b789120-3762-4d21-b374-2651ecc9f9b9"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bem vindo, Josimar Vieira\n",
+            "Menu\n",
+            "Tamanho P: PS: R$ 30 - PD: R$ 34\n",
+            "Tamnho M; PS: R$ 45 - PD: R$ 48\n",
+            "Tamanho G: PS: R$ 60 - P: R$ 66\n",
+            "Digite o sabor desejado (PS para Salgada / PD para doce):PG\n",
+            "Sabor inválido. Tente Novamente\n",
+            "Digite o sabor desejado (PS para Salgada / PD para doce):PS\n",
+            "Digite o tamanho desejado (P, M ou G):EXGG\n",
+            "Tamanho inválido. Tente Novamente\n",
+            "Digite o sabor desejado (PS para Salgada / PD para doce):PS\n",
+            "Digite o tamanho desejado (P, M ou G):G\n",
+            "Valor a Pagar: R$60.00\n",
+            "Deseja pedir mais alguma coisa? (S/N)S\n",
+            "Digite o sabor desejado (PS para Salgada / PD para doce):PD\n",
+            "Digite o tamanho desejado (P, M ou G):M\n",
+            "Valor a Pagar: R$48.00\n",
+            "Deseja pedir mais alguma coisa? (S/N)N\n",
+            "Pedido encerrado!\n",
+            "Valor Total: R$108.00\n",
+            "Obrigado por comprar na pizzaria do Josimar!\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Nome e menu\n",
+        "print('Bem vindo, Josimar Vieira')\n",
+        "\n",
+        "print('Menu')\n",
+        "print('Tamanho P: PS: R$ 30 - PD: R$ 34')\n",
+        "print('Tamnho M; PS: R$ 45 - PD: R$ 48')\n",
+        "print('Tamanho G: PS: R$ 60 - P: R$ 66')\n",
+        "\n",
+        "total = 0\n",
+        "\n",
+        "while True:\n",
+        "#Solicitação do sabor\n",
+        "  sabor = input('Digite o sabor desejado (PS para Salgada / PD para doce):').upper()\n",
+        "\n",
+        "  if sabor != 'PS' and sabor != 'PD':\n",
+        "    print('Sabor inválido. Tente Novamente')\n",
+        "    continue\n",
+        "#solicitação do tamanho\n",
+        "  else:\n",
+        "    tamanho = input('Digite o tamanho desejado (P, M ou G):').upper()\n",
+        "    if tamanho != 'P' and tamanho != 'M' and tamanho != 'G':\n",
+        "      print('Tamanho inválido. Tente Novamente')\n",
+        "      continue\n",
+        "    else:\n",
+        "      if sabor =='PS':\n",
+        "        preco = 30\n",
+        "        if tamanho == 'P':\n",
+        "          preco = 30\n",
+        "        elif tamanho == 'M':\n",
+        "          preco = 45\n",
+        "        elif tamanho == 'G':\n",
+        "          preco = 60\n",
+        "      else:\n",
+        "        if sabor == 'PD':\n",
+        "          preco = 34\n",
+        "          if tamanho == 'P':\n",
+        "            preco = 34\n",
+        "          elif tamanho == 'M':\n",
+        "            preco = 48\n",
+        "          elif tamanho == 'G':\n",
+        "            preco = 66\n",
+        "\n",
+        "    total += preco\n",
+        "#preço\n",
+        "    print(f'Valor a Pagar: R${preco:.2f}')\n",
+        "\n",
+        "  mais = input('Deseja pedir mais alguma coisa? (S/N)').upper()\n",
+        "\n",
+        "  if mais == 'S':\n",
+        "    continue\n",
+        "  elif mais == 'N':\n",
+        "    break\n",
+        "  else:\n",
+        "    print(\"Opção Invalida! Encerrando o pedido por segurança\")\n",
+        "    break\n",
+        "\n",
+        "#mensagem final\n",
+        "print('Pedido encerrado!')\n",
+        "print(f'Valor Total: R${total:.2f}')\n",
+        "print('Obrigado por comprar na pizzaria do Josimar!')"
+      ]
+    }
+  ]
+}
