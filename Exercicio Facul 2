@@ -1,0 +1,79 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPhjPjfN3gVE9Wp78MXqgt3",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/josi0902/Exercicios-Facul/blob/main/Exercicio%20Facul%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Fi9ahGqPDPk5",
+        "outputId": "89424283-f797-4760-913a-9e4b5fa173cf"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bem vindo, Josimar Vieira\n",
+            "Digite o valor base do plano:100.00\n",
+            "Digite a idade do cliente:45\n",
+            "O valor mensal do plano é R$ 240.00\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Programa para calcular o valor mensal de um plano de saude.\n",
+        "\n",
+        "#Nome do cliente\n",
+        "print('Bem vindo, Josimar Vieira')\n",
+        "\n",
+        "valorBase = float(input(\"Digite o valor base do plano:\"))\n",
+        "idade = int(input(\"Digite a idade do cliente:\"))\n",
+        "#Valores e percentagem\n",
+        "if idade >= 0 and idade <19:\n",
+        "  porcentagem = 100\n",
+        "elif idade >= 19 and idade < 29:\n",
+        "  porcentagem = 150\n",
+        "elif idade >= 29 and idade < 39:\n",
+        "  porcentagem = 225\n",
+        "elif idade >= 39 and idade < 49:\n",
+        "  porcentagem = 240\n",
+        "elif idade >= 49 and idade < 59:\n",
+        "  porcentagem = 350\n",
+        "else: # idade >= 59\n",
+        "  porcentagem = 600\n",
+        "\n",
+        "valorMensal = valorBase * (porcentagem / 100)\n",
+        "\n",
+        "print(f\"O valor mensal do plano é R$ {valorMensal:.2f}\")"
+      ]
+    }
+  ]
+}
